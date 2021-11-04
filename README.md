@@ -57,19 +57,22 @@ BERTの出力以降の構造を数種類試行しました。<br>
 | ----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
 |microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext|logit|val_loss|1:50|weigted bce|0.0233|0.910|0.907|0.899|0.914|0.927|0.923|0.4537|0.3314||
 |microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext|last hidden state - cnn|val_loss|1:50|weighted bce|0.1|0.905|0.904|0.906|0.903|0.931|0.923|0.428|0.262||
-|microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext|4 layers [cls] concat|val_fbeta|class_weight="balanced"|bce|0.1|0.920|0.914|0.911|-|0.936|-|0.12|0.247|use summary insted of text|
-|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_fbeta|class_weight="balanced"|bce|0.0233|0.9182|0.9105|0.9024|0.9009|0.9185|0.9201|0.016|0.026||
+|microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext|4 layers [cls] concat|val_fbeta|class_weight=<br>"balanced"|bce|0.1|0.920|0.914|0.911|-|0.936|-|0.12|0.247|use summary insted of text|
+|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_fbeta|class_weight=<br>"balanced"|bce|0.0233|0.9182|0.9105|0.9024|0.9009|0.9185|0.9201|0.016|0.026||
 |cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_loss|1:50|weigted bce|0.0233|0.9142|0.9151|0.8998|0.9052|0.9309|0.9279|0.471|0.3933||
 |cambridgeltl/SapBERT-from-PubMedBERT-fulltext|logit|val_loss|1:50|weigted bce|0.0233|0.9155|0.9152|0.9045|0.8835|0.9336|0.9217|0.4335|0.6317||
-|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_auc|class_weight="balamced"|bce|0.0233|0.876|0.873|0.884|0.887|0.895|0.927|0.031|0.109||
-|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_loss|class_weight="balamced"|bce(label smooth=0.1)|0.015|0.904|0.9015|0.898|-|0.9127|-|0.079|0.105||
+|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_auc|class_weight=<br>"balamced"|bce|0.0233|0.876|0.873|0.884|0.887|0.895|0.927|0.031|0.109||
+|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|single [cls]|val_loss|class_weight=<br>"balamced"|bce(label smooth=0.1)|0.015|0.904|0.9015|0.898|-|0.9127|-|0.079|0.105||
 |cambridgeltl/SapBERT-from-PubMedBERT-fulltext|last hidden state - bilstm|val_loss|1:50|weighted bce|0.1|0.9108|0.9095|0.898|0.9013|0.9338|0.9338|0.424|0.407||
 |cambridgeltl/SapBERT-from-PubMedBERT-fulltext|4 layers [cls] concat|val_loss|1:50|weighted bce|0.1|0.9184|0.9157|0.888|0.9016|0.9224|0.930|0.539|0.4315||
-|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|4 layers [cls] concat|val_fbeta|class_weight="balamced"|bce|0.1|0.9116|0.9106|0.910|0.906|0.9124|0.921|0.1012|0.1446|use summary insted of text|
+|cambridgeltl/SapBERT-from-PubMedBERT-fulltext|4 layers [cls] concat|val_fbeta|class_weight=<br>"balamced"|bce|0.1|0.9116|0.9106|0.910|0.906|0.9124|0.921|0.1012|0.1446|use summary insted of text|
 |kamalkraj/bioelectra-base-discriminator-pubmed|logit|val_loss|1:50|weighted bce|0.0233|0.904|0.9005|0.9019|0.9028|0.9203|0.9209|0.539|0.5472||
-|kamalkraj/bioelectra-base-discriminator-pubmed-pmc|4 layers [cls] concat|val_fbeta|class_weight="balamced"|bce|0.1|0.917|0.9104|0.898|-|0.9064|-|0.135|0.366|use summary insted of text|
-|dmis-lab/biobert-base-cased-v1.2|4 layers [cls] concat|val_fbeta|class_weight="balamced"|bce|0.1|0.909|0.908|0.8989|-|0.9103|-|-|-|use summary insted of text|
+|kamalkraj/bioelectra-base-discriminator-pubmed-pmc|4 layers [cls] concat|val_fbeta|class_weight=<br>"balamced"|bce|0.1|0.917|0.9104|0.898|-|0.9064|-|0.135|0.366|use summary insted of text|
+|dmis-lab/biobert-base-cased-v1.2|4 layers [cls] concat|val_fbeta|class_weight=<br>"balamced"|bce|0.1|0.909|0.908|0.8989|-|0.9103|-|-|-|use summary insted of text|
 |ensemble randomforest||val_fbeta||||0.9257||0.9186||0.9324|||||
 |ensemble svm||val_fbeta||||0.9311||0.9099||0.9363|||||
 |ensemble decision tree||val_fbeta||||0.9033||0.8994||0.9276|||||
 ## 最終リーダーボード順位
+ 27位/638人投稿で銀メダルを獲得しました。
+ ***
+![lb](https://user-images.githubusercontent.com/81244428/140251832-70cd89d0-0b95-4d15-b36f-1fd8da0d174e.PNG)
