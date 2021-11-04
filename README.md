@@ -3,9 +3,9 @@
 
 ## コンペティションの概要
 上述のコンペティションのタスクは、論文のタイトルおよび抄録のテキストデータを用いて、システマティックレビューの対象となる文献か否か（2値）を判定するものとなっています。
+![compe_image](https://user-images.githubusercontent.com/81244428/140285668-f7fe0e85-d000-4ea7-833c-a79b4e50fdfc.png)
 
-
-具体的には、与えれたcsvファイルの"title","abstract"列を入力として、"judgement"列が正例か負例かを予測するものです。<br>
+具体的には、与えれたcsvファイルの"title","abstract"列の文字列を入力として、"judgement"列の(0 or 1)を予測します。<br>
 評価スコアは、FBetaScore(beta=7)により算出されます。
 
 ## ipynbの概要
@@ -73,6 +73,6 @@ BERTの出力以降の構造を数種類試行しました。<br>
 |ensemble svm||val_fbeta||||0.9311||0.9099||0.9363|||||
 |ensemble decision tree||val_fbeta||||0.9033||0.8994||0.9276|||||
 ## 最終リーダーボード順位
- 27位/638人投稿で銀メダルを獲得しました。
+ 27位/638人投稿(上位4.2%)で銀メダルを獲得しました。
  ***
 ![lb](https://user-images.githubusercontent.com/81244428/140251832-70cd89d0-0b95-4d15-b36f-1fd8da0d174e.PNG)
